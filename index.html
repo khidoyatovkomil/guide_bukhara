@@ -331,7 +331,7 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -342,6 +342,8 @@
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .portfolio-card:hover {
@@ -362,6 +364,9 @@
 
         .portfolio-card-content {
             padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
         }
 
         .portfolio-card h3 {
@@ -462,6 +467,12 @@
         }
 
         /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .nav {
                 padding: 1rem;
@@ -637,6 +648,12 @@
                     <img src="images/tur_4.JPG" alt="Делегация Беларуси">
                     <div class="portfolio-card-content">
                         <h3>Делегация во главе с министром обороны Белоруси В.Хрениным</h3>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="images/tur_5.jpg" alt="Президенты Мирзиёев и Токаев">
+                    <div class="portfolio-card-content">
+                        <h3>Экскурсия по Старому городу для президентов Узбекистана Ш.Мирзиёева и Казахстана К.Токаева</h3>
                     </div>
                 </div>
             </div>
